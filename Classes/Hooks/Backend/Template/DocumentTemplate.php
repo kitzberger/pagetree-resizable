@@ -21,7 +21,7 @@ class DocumentTemplate
      */
     public function __construct()
     {
-        if (TYPO3_MODE === 'BE') {
+        if (TYPO3 === 'BE') {
             $pageRenderer = GeneralUtility::makeInstance(PageRenderer::class);
             if ($width = $this->getUserElementBrowserTreeWidth()) {
                 $pageRenderer->addCssInlineBlock('wazum/pagetree-resizable', '
